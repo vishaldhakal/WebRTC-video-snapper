@@ -11,11 +11,15 @@ const photos = document.getElementById('photos')
 const photoButton = document.getElementById('photo-button')
 const clearButton = document.getElementById('clear-button')
 const photoFilter = document.getElementById('photo-filter')
+const flip = document.getElementById('flip')
 
 //Get Media Stream
-
-var get_user_media = {video: { facingMode: "user" }};
-
+let front  = true;
+flip.addEventListener('click',function(e){
+    front = !front;
+    e.preventDefault()
+})
+const get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
 
 navigator.mediaDevices.getUserMedia(get_user_media)
     .then(function(stream){
