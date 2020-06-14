@@ -13,11 +13,11 @@ const clearButton = document.getElementById('clear-button')
 const photoFilter = document.getElementById('photo-filter')
 
 //Get Media Stream
+var front = false;
+document.getElementById('flip').onclick = function() { front = !front; };
 
-const get_user_media = {
-    video:true,
-    audio:false
-}
+var get_user_media = { video: { facingMode: (front? "user" : "environment") } };
+
 
 navigator.mediaDevices.getUserMedia(get_user_media)
     .then(function(stream){
@@ -88,3 +88,4 @@ clearButton.addEventListener('click',function(){
     video.style.filter = filter;
     photoFilter.selectedIndex = 0;
 });
+
