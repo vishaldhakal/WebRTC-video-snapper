@@ -1,0 +1,45 @@
+body{
+    background: url('../img/bg.jpeg');
+}
+h1{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#canvas{
+    display: none;
+}
+
+.top-container{
+    width: 500px;
+    margin: 30px auto;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.btn-dark{
+    background: rgb(0, 160, 0);
+    color: white;
+    border: #666 1px solid;
+}
+
+.select{
+    height: 40px;
+    background-color: rgb(255, 0, 98);
+    width: 100%;
+    margin-bottom: 4px;
+    font-size: 30px;
+    color: white;
+}
+button{
+    outline: 0;
+}
+.select{
+    outline: 0;
+}
