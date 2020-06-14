@@ -13,13 +13,15 @@ const clearButton = document.getElementById('clear-button')
 const photoFilter = document.getElementById('photo-filter')
 const flip = document.getElementById('flip')
 
+let get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
+
 //Get Media Stream
 let front  = true;
 flip.addEventListener('click',function(){
     front = !front;
     console.log('flip')
+    get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
 })
-let get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
 
 navigator.mediaDevices.getUserMedia(get_user_media)
     .then(function(stream){
