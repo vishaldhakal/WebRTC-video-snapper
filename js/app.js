@@ -13,10 +13,8 @@ const clearButton = document.getElementById('clear-button')
 const photoFilter = document.getElementById('photo-filter')
 
 //Get Media Stream
-var front = false;
-document.getElementById('flip').onclick = function() { front = !front; };
 
-var get_user_media = { video: { facingMode: (front? "user" : "environment") } };
+var get_user_media = {video: { facingMode: "user" }};
 
 
 navigator.mediaDevices.getUserMedia(get_user_media)
