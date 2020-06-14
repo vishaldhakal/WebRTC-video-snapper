@@ -12,11 +12,10 @@ const photoButton = document.getElementById('photo-button')
 const clearButton = document.getElementById('clear-button')
 const photoFilter = document.getElementById('photo-filter')
 const flip = document.getElementById('flip')
-
+let front  = true;
 let get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
 
 //Get Media Stream
-let front  = true;
 flip.addEventListener('click',function(){
     front = !front;
     console.log('flip')
