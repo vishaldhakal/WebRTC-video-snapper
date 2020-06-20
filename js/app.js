@@ -15,12 +15,7 @@ const flip = document.getElementById('flip')
 let front  = true;
 let get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
 
-//Get Media Stream
-flip.addEventListener('click',function(){
-    front = !front;
-    console.log('flip')
-    get_user_media = {video: { facingMode: (front? "user" : "environment")  }};
-})
+
 
 navigator.mediaDevices.getUserMedia(get_user_media)
     .then(function(stream){
